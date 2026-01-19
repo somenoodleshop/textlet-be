@@ -13,4 +13,6 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(healthcheck())
 
+app.use('*', (req, res) => res.sendStatus(404))
+
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}`))
