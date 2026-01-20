@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "bin": "src/server.js",
   "pkg": {
     "scripts": ["src/**/*.js"],
