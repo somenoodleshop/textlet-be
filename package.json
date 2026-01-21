@@ -8,7 +8,7 @@
   "pkg": {
     "scripts": ["src/**/*.js"],
     "assets": [],
-    "targets": ["node18-linuxstatic-x64"],
+    "targets": ["node20-alpine-x64"],
     "outputPath": "dist"
   },
   "scripts": {
