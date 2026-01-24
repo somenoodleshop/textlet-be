@@ -9,4 +9,11 @@ export const read = (req, res, next) =>
     .then(comments => res.json(comments))
     .catch(next)
 
-export const write = (req, res, next) => {}
+export const write = ({ user_id, content }, res, next) =>
+  database
+    .insertInto('comment')
+    .values({ user_id, content })
+    .returningAll()
+    .executeTakeFirst()
+    .then(comment => res.status(201).json(comment))
+    .catch(next)
