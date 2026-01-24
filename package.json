@@ -6,9 +6,13 @@
   "type": "module",
   "bin": "src/server.js",
   "pkg": {
-    "scripts": ["src/**/*.js"],
+    "scripts": [
+      "src/**/*.js"
+    ],
     "assets": [],
-    "targets": ["node20-alpine-x64"],
+    "targets": [
+      "node20-alpine-x64"
+    ],
     "outputPath": "dist"
   },
   "scripts": {
@@ -23,7 +27,8 @@
     "cors": "^2.8.5",
     "express": "^5.2.1",
     "express-healthcheck": "^0.1.0",
-    "helmet": "^8.1.0"
+    "helmet": "^8.1.0",
+    "kysely": "^0.28.10"
   },
   "devDependencies": {
     "pkg": "^5.8.1"
