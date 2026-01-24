@@ -10,10 +10,12 @@ export const read = (req, res, next) =>
     .catch(next)
 
 export const write = ({ user_id, content }, res, next) =>
-  database
-    .insertInto('comment')
-    .values({ user_id, content })
-    .returningAll()
-    .executeTakeFirst()
-    .then(comment => res.status(201).json(comment))
-    .catch(next)
+  (!user_id || !content)
+    ? res.status(400).json({ error: 'user_id and content are required' })
+    : database
+      .insertInto('comment')
+      .values({ user_id, content })
+      .returningAll()
+      .executeTakeFirst()
+      .then(comment => res.status(201).json(comment))
+      .catch(next)
