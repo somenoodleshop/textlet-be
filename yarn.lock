@@ -686,6 +686,11 @@ jsonfile@^6.0.1:
   optionalDependencies:
     graceful-fs "^4.1.6"
 
+kysely@^0.28.10:
+  version "0.28.10"
+  resolved "https://registry.yarnpkg.com/kysely/-/kysely-0.28.10.tgz#d2441080cd6c633a3c6a927c2a364c69bbb829a7"
+  integrity sha512-ksNxfzIW77OcZ+QWSAPC7yDqUSaIVwkTWnTPNiIy//vifNbwsSgQ57OkkncHxxpcBHM3LRfLAZVEh7kjq5twVA==
+
 math-intrinsics@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/math-intrinsics/-/math-intrinsics-1.1.0.tgz#a0dd74be81e2aa5c2f27e65ce283605ee4e2b7f9"
