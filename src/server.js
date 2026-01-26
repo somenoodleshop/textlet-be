@@ -3,6 +3,8 @@ import express from 'express'
 import healthcheck from 'express-healthcheck'
 import helmet from 'helmet'
 
+import * as comment from './resource/comment.js'
+
 const { PORT = 80 } = process.env
 
 const app = express()
