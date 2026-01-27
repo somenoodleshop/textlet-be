@@ -16,6 +16,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use(healthcheck())
 
 app.get('/v1/comment', comment.read)
+app.post('/v1/comment', comment.write)
 
 app.use('*', (req, res) => res.sendStatus(404))
 
