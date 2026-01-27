@@ -20,6 +20,7 @@ app.post('/v1/comment', comment.write)
 
 app.get('/v1/protected', (req, res) => {
   const sessionToken = req.headers.get('X-Session-Token')
+  const user = req.headers.get('X-User')
   res.json({ message: 'Hello, world!', sessionToken })
 })
 
