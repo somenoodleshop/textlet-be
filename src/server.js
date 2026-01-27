@@ -19,6 +19,7 @@ app.get('/v1/comment', comment.read)
 app.post('/v1/comment', comment.write)
 
 app.get('/v1/protected', (req, res) => {
+  const sessionToken = req.headers.get('X-Session-Token')
   res.json({ message: 'Hello, world!' })
 })
 
